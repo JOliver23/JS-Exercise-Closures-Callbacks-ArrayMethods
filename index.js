@@ -100,7 +100,7 @@ function processSum(numberList, callback) {
  return callback(total);
 }
 
-/**
+/*Challenge `processProduct`*
  * ### Challenge `processProduct`
  * 
  * @instructions
@@ -119,9 +119,8 @@ function processSum(numberList, callback) {
  * should return 1000.
 */
 function processProduct(num1, num2, callback) {
-  const product = (num1, num2) => {num1 * num2};
+  let product = num1 * num2;
   return callback(product);
-  /* CODE HERE */
 }
 
 /**
@@ -144,7 +143,7 @@ function processProduct(num1, num2, callback) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
+function processContains(item,) {
   /* CODE HERE */
 }
 
