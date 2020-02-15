@@ -28,7 +28,7 @@ function processFirstItem(stringList, callback) {
 /////////////// CALLBACKS AND HIGHER-ORDER FUNCTIONS ///////////////
 /////////////// CALLBACKS AND HIGHER-ORDER FUNCTIONS ///////////////
 
-/**
+/*Challenge `processLength`*
  * ### Challenge `processLength`
  * 
  * @instructions
@@ -53,7 +53,7 @@ function processLength(list, callback) {
   /* CODE HERE */
 }
 
-/**
+/*Challenge `processLastItem`*
  * ### Challenge `processLastItem`
  * 
  * @instructions
@@ -89,8 +89,15 @@ function processLastItem(stringList, callback) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(numberList, callback) {
+ /*let total = 0;
+ for (let i = 0; i < numberList.length; i++) {
+   total += numberList[i];
+ }*/
+ const total = numberList.reduce((total, numberList) => {
+   return total += numberList;
+ }, 0);
+ return callback(total);
 }
 
 /**
