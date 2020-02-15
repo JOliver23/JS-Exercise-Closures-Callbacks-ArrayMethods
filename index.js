@@ -123,7 +123,7 @@ function processProduct(num1, num2, callback) {
   return callback(product);
 }
 
-/**
+/*Challenge `processContains`*
  * ### Challenge `processContains`
  * 
  * @instructions
@@ -196,7 +196,7 @@ function getFullNames(runners) {
     let name = (`${item.last_name}, ${item.first_name}`);
     fullName.push(name);
   })
-  return getFullNames;  /* CODE HERE */
+  return fullName;  /* CODE HERE */
 }
 
 /**
