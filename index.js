@@ -215,7 +215,6 @@ function firstNamesAllCaps(runners) {
   return runners.map((item) =>{
     return item.first_name.toUpperCase();
   });
-  /* CODE HERE */
 }
 
 /**
@@ -231,7 +230,11 @@ function firstNamesAllCaps(runners) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  const needSize = runners.filter((tShirtSize) => {
+    runners.tShirtSize = tShirtSize;
+  });
+  return needSize;
   /* CODE HERE */
 }
 
