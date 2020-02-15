@@ -179,7 +179,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 // updates to their facilities. Each business has assigned a representative
 // to attend the event along with a small donation.
 
-/**
+/*Challenge `getFullNames`*
  * ### Challenge `getFullNames`
  * 
  * @instructions
@@ -199,7 +199,7 @@ function getFullNames(runners) {
   return fullName;  /* CODE HERE */
 }
 
-/**
+/*Challenge `firstNamesAllCaps`*
  * ### Challenge `firstNamesAllCaps`
  * 
  * @instructions
@@ -211,7 +211,10 @@ function getFullNames(runners) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
+  return runners.map((item) =>{
+    return item.first_name.toUpperCase();
+  });
   /* CODE HERE */
 }
 
