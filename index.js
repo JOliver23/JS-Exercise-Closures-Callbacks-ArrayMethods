@@ -231,10 +231,10 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
-  const needSize = runners.filter((tShirtSize) => {
-    runners.tShirtSize = tShirtSize;
+  const newRunners = runners.filter((runners) => {
+    return runners.shirt_size == tShirtSize;
   });
-  return needSize;
+  return newRunners;
   /* CODE HERE */
 }
 
@@ -248,8 +248,10 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
 */
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
+function tallyUpDonations(runners) {
+  return runners.reduce((total, runners) => {
+    return total += runners.donation;
+  }, 0);
 }
 
 /////////////// CLOSURES ///////////////
@@ -270,12 +272,11 @@ function tallyUpDonations(/* CODE HERE */) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count = 0;
+  return function counter() {
+    return count++;
   }
-  // BROKEN CODE ENDS
-}
+};
 
 /**
  * ### Challenge `counterMakerWithLimit`
@@ -297,7 +298,16 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
+function counterMakerWithLimit(maxVal){
+  let count = 0;
+  return function counter () {
+    if (count<=maxVal){
+      return count++;
+    }
+    else {
+      return count = 1;
+    }
+    };
   /* CODE HERE */
 }
 
