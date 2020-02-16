@@ -299,16 +299,20 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit(maxVal){
-  let count = 0;
+  let count = -1;
   return function counter () {
-    if (count<=maxVal){
-      return count++;
+    if (count < maxVal){
+      count++;
+      return count;
+    }
+    else if(count = maxVal){
+      count = count - maxVal;
+      return count;
     }
     else {
-      return count = 1;
+      return count = 0;
     }
-    };
-  /* CODE HERE */
+  };
 }
 
 /////////////// END OF CHALLENGE ///////////////
